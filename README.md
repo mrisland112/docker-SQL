@@ -27,3 +27,6 @@ username 可以新增使用者或用 root
 成功連接
 ![image](https://github.com/mrisland112/docker-SQL/assets/28065019/58fc956d-77ac-444f-82dc-181dcc02c902)
 
+### 撰寫 SQL 寫入資料測試
+可以使用 dev-data.sql
+
