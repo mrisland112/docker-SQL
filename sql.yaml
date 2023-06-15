@@ -1,0 +1,12 @@
+#建立Docker compose file，在專案資料夾，並寫入以下內容
+
+services:
+  mysql_db:                            
+    image: mysql:8.0.32
+    ports:                              #啟動server port
+      - "3309:3306"                     
+    volumes:                            
+      - ./mysql:/var/lib/mysql          #建立volumes
+    environment:
+      - MYSQL_DATABASE=mysql            #指定連接MySQL資料庫
+      - MYSQL_ROOT_PASSWORD={YOUR_PASSWORDS}      
