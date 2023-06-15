@@ -6,6 +6,13 @@ docker compose up                                           #利用 docker compo
 docker exec -it docker_compose_python-mysql_db-1 /bin/bash  #在終端機進入容器
 ```
 
+也可以 run 寫好的 Dockerfile檔
+```
+docker build -t {image_name} .                                                       #建立image
+docker run -idt --name {container_name} -v ${PWD}/mysql:/var/lib/mysql {image_name}  #建立容器並執行
+docker exec -it docker_compose_python-mysql_db-1 /bin/bash                           #在終端機進入容器
+```
+
 連線 MYSQL 容器內部 root 帳戶
 ```
 mysql -uroot -p -A   #進入SQL root 帳戶(後續需要輸入 docker compose 檔案設的 passwords)
